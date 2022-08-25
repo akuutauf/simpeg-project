@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('layouts.pages.beranda');
 });
 
+Route::get('/kepegawaian', function () {
+    return view('layouts.pages.kepegawaian');
+});
+
 // middleware for admin page
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {

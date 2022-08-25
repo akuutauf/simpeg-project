@@ -13,6 +13,7 @@
     {{-- Css manual --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
+    <link rel="shortcut icon" class="taskbar-icon" href="{{ asset('admin/images/logo-sim.png') }}" />
     @yield('title')
 </head>
 

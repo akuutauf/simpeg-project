@@ -1,7 +1,7 @@
 @extends('layouts.base-user')
 
 @section('title')
-    <title>Beranda | SIMPEG</title>
+    <title>Kepegawaian | SIMPEG</title>
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
             </div>
             <div class="col-lg-6 mb-3 text-right my-auto">
                 <h1>Hi there..</h1>
-                <h3>Welcome to our project.</h3>
+                <h4>SIMPEG is online management employee.</h4>
                 <p>Feel free to continue your creativity with us.</p>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia libero nam dignissimos vel fugit.
                     Veniam minima at architecto, voluptatum ipsum sequi illum, nam odit dolorem unde magnam culpa vitae ea
