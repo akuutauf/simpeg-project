@@ -1,0 +1,56 @@
+/* poppins online fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+body {
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    background-color: #f5f7ff;
+}
+
+.fw-light {
+    font-weight: 300;
+}
+
+.fw-regular {
+    font-weight: 400;
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+.fw-semi-bold {
+    font-weight: 600;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.fw-x-bold {
+    font-weight: 800;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.bg-nav-theme {
+    background-color: #ffffff;
+}
+
+.bg-footer-theme {
+    background-color: #7978e9;
+}
+
+.shadow-card {
+    /* box-shadow: 1px 1px 1px 1px rgba(12, 12, 12, 0.2); */
+    box-shadow: 0px 5px 25px rgb(1 1 1 / 10%);
+}
+
+/* Colors */
+/* #F5F7FF;
+ #7978E9;
+ #7DA0FA;
+ #4747A1;
+ #F3797E; */
