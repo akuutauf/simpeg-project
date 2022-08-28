@@ -5,50 +5,57 @@
 @endsection
 
 @section('content')
-    <div class="container py-5 mt-3">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 mb-3">
-                <img src="{{ asset('img/ilustrator/welcome.svg') }}" class=" img-fluid " alt="">
+    <div class="container py-5 mt-5 pt-5">
+        <div class="row justify-content-around">
+            <div class="col-lg-6 mb-3 text-left my-auto">
+                <h1>Mau tau nih..</h1>
+                <h4>Siapa aja yang sudah gabung ?</h4>
+                <p class="text-secondary">Berikut adalah data pegawai dari perusahaan kami.</p>
+                <p class="text-secondary">Kami telah bekerjasama dengan berbagai pihak, perusahaan dan berbagai startup yang
+                    terdapat di daerah kami.
+                </p>
             </div>
-            <div class="col-lg-6 mb-3 text-right my-auto">
-                <h1>Hi there..</h1>
-                <h4>SIMPEG is online management employee.</h4>
-                <p>Feel free to continue your creativity with us.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia libero nam dignissimos vel fugit.
-                    Veniam minima at architecto, voluptatum ipsum sequi illum, nam odit dolorem unde magnam culpa vitae ea
-                    dignissimos exercitationem fugit ullam quas.</p>
+            <div class="col-lg-5 mb-3">
+                <img src="{{ asset('img/ilustrator/employee.svg') }}" class=" img-fluid" alt="">
             </div>
         </div>
-        <div class="row py-4 justify-content-around mb-4">
+        <div class="row py-4 justify-content-around mb-4 mt-4">
             <div class="col-lg-12">
                 <div class="shadow-card p-5 fw-regular text-justify">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, in dolore! Harum dolorum
-                        libero
-                        voluptas beatae, quis asperiores aperiam dicta consequatur quia sit labore totam, saepe officia amet
-                        iure
-                        similique praesentium a, deleniti alias! Corporis dolor unde porro eos corrupti veniam temporibus
-                        iusto possimus
-                        quod non magnam sit alias voluptate ipsa ad cumque eligendi deleniti tempora perferendis velit
-                        quisquam nulla,
-                        officiis culpa! Animi itaque optio sunt vel eligendi, nesciunt officiis quia placeat distinctio ipsa
-                        est dolores
-                        quaerat tenetur ab velit possimus veniam, numquam quidem fugit natus reprehenderit ullam architecto?
-                        Soluta
-                        voluptatibus distinctio ab officia odit dicta similique deleniti error quos ut ipsum, assumenda iure
-                        repudiandae
-                        quia ipsam quae? Molestias, porro odio officia repellendus error dignissimos distinctio atque
-                        voluptas unde
-                        fugiat non vel recusandae nesciunt quasi perferendis provident nemo corporis, eligendi officiis ad
-                        architecto
-                        eum odit necessitatibus! Amet, cupiditate aliquid iure repudiandae maiores reiciendis ab aspernatur
-                        aut laborum
-                        eius alias, culpa error. Natus eos reiciendis error minima officia beatae similique dolores aliquam
-                        dicta maxime
-                        dolor atque praesentium dignissimos quasi, incidunt mollitia culpa voluptas repellat! Est,
-                        accusamus. Veniam
-                        ipsa repellat voluptatibus. Facilis, placeat, hic quam delectus odio voluptatum enim quae eligendi
-                        labore
-                        laborum nemo quasi vitae. Id rem corrupti possimus distinctio assumenda.</p>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th class="bg-theme text-white" scope="col">No</th>
+                                <th class="bg-theme text-white" scope="col">Nama Pegawai</th>
+                                <th class="bg-theme text-white" scope="col">Jabatan</th>
+                                <th class="bg-theme text-white" scope="col">Email</th>
+                                <th class="bg-theme text-white" scope="col">Kota</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Andy</td>
+                                <td>Karyawan</td>
+                                <td scope="col">andy@email.com</td>
+                                <td scope="col">Banyuwangi</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Bambang</td>
+                                <td>Karyawan</td>
+                                <td scope="col">bambang@email.com</td>
+                                <td scope="col">Banyuwangi</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Agus</td>
+                                <td>Karyawan</td>
+                                <td scope="col">agus@email.com</td>
+                                <td scope="col">Banyuwangi</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
