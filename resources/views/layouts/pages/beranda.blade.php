@@ -5,51 +5,27 @@
 @endsection
 
 @section('content')
-    <div class="container py-5 mt-3">
+    <div class="container py-5 mt-5 pt-5">
         <div class="row justify-content-center">
             <div class="col-lg-6 mb-3">
                 <img src="{{ asset('img/ilustrator/welcome.svg') }}" class=" img-fluid " alt="">
             </div>
             <div class="col-lg-6 mb-3 text-right my-auto">
-                <h1>Hi there..</h1>
-                <h3>Welcome to our project.</h3>
-                <p>Feel free to continue your creativity with us.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia libero nam dignissimos vel fugit.
-                    Veniam minima at architecto, voluptatum ipsum sequi illum, nam odit dolorem unde magnam culpa vitae ea
-                    dignissimos exercitationem fugit ullam quas.</p>
+                <h1>Halo kamu,</h1>
+                <h3>Selamat datang di aplikasi Simpeg.</h3>
+                <p class="text-secondary">Masuk ke admin untuk memulai manajemen data Pegawai, mari manajemen data pegawai
+                    Anda bersama kami.</p>
+                <a href="login" type="button" class="btn bg-btn-theme text-white">Login Sekarang</a>
             </div>
         </div>
-        <div class="row py-4 justify-content-around mb-4">
-            <div class="col-lg-12">
-                <div class="shadow-card p-5 fw-regular text-justify">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, in dolore! Harum dolorum
-                        libero
-                        voluptas beatae, quis asperiores aperiam dicta consequatur quia sit labore totam, saepe officia amet
-                        iure
-                        similique praesentium a, deleniti alias! Corporis dolor unde porro eos corrupti veniam temporibus
-                        iusto possimus
-                        quod non magnam sit alias voluptate ipsa ad cumque eligendi deleniti tempora perferendis velit
-                        quisquam nulla,
-                        officiis culpa! Animi itaque optio sunt vel eligendi, nesciunt officiis quia placeat distinctio ipsa
-                        est dolores
-                        quaerat tenetur ab velit possimus veniam, numquam quidem fugit natus reprehenderit ullam architecto?
-                        Soluta
-                        voluptatibus distinctio ab officia odit dicta similique deleniti error quos ut ipsum, assumenda iure
-                        repudiandae
-                        quia ipsam quae? Molestias, porro odio officia repellendus error dignissimos distinctio atque
-                        voluptas unde
-                        fugiat non vel recusandae nesciunt quasi perferendis provident nemo corporis, eligendi officiis ad
-                        architecto
-                        eum odit necessitatibus! Amet, cupiditate aliquid iure repudiandae maiores reiciendis ab aspernatur
-                        aut laborum
-                        eius alias, culpa error. Natus eos reiciendis error minima officia beatae similique dolores aliquam
-                        dicta maxime
-                        dolor atque praesentium dignissimos quasi, incidunt mollitia culpa voluptas repellat! Est,
-                        accusamus. Veniam
-                        ipsa repellat voluptatibus. Facilis, placeat, hic quam delectus odio voluptatum enim quae eligendi
-                        labore
-                        laborum nemo quasi vitae. Id rem corrupti possimus distinctio assumenda.</p>
-                </div>
+        <div class="row py-4 justify-content-around mb-4 mt-3">
+            <div class="col-lg-4">
+                <h3><span class="text-color-theme fw-semi-bold">100</span> Pegawai</h3>
+                <p class="text-justify text-secondary">Kemi telah berpartners bersama puluhan lebih pegawai, dan kami juga
+                    merekrut banyak sekali pegawai hal berkualitas dan ahli dibidangnya.</p>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="{{ asset('img/ilustrator/data-home.svg') }}" alt="">
             </div>
         </div>
     </div>

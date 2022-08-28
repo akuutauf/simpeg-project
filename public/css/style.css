@@ -43,9 +43,21 @@ body {
     background-color: #7978e9;
 }
 
+.bg-btn-theme {
+    background-color: #7978e9;
+}
+
+.bg-theme {
+    background-color: #7978e9;
+}
+
 .shadow-card {
     /* box-shadow: 1px 1px 1px 1px rgba(12, 12, 12, 0.2); */
     box-shadow: 0px 5px 25px rgb(1 1 1 / 10%);
+}
+
+.text-color-theme {
+    color: #7978e9;
 }
 
 /* Colors */
