@@ -23,7 +23,9 @@
                     <div class="row">
                         <div class="col-12 col-xl-8 mb-4 mb-xl-0">
                             <h3 class="font-weight-bold">Selamat datang {{ Auth::user()->name }}</h3>
-                            <h6 class="font-weight-normal mb-0">Yuk mulai manajemen data Employee Type kamu bersama kami.
+                            <h6 class="font-weight-normal mb-0">Yuk mulai manajemen data <span
+                                    class="text-primary"><b>Employee Type</b></span> kamu bersama
+                                kami.
                             </h6>
                         </div>
                         <div class="col-12 col-xl-4">

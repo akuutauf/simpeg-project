@@ -24,7 +24,11 @@
                     Menu Website
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('login') }}">Login</a>
+                    @if (auth()->user() != null)
+                        <a class="dropdown-item" href="{{ route('dashboard') }}">Masuk</a>
+                    @else
+                        <a class="dropdown-item" href="{{ route('login') }}">Login</a>
+                    @endif
                     <a class="dropdown-item" href="{{ route('register') }}">Register</a>
                 </div>
             </li>

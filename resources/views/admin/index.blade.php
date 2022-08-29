@@ -24,7 +24,7 @@
                         <div class="col-12 col-xl-8 mb-4 mb-xl-0">
                             <h3 class="font-weight-bold">Selamat datang {{ Auth::user()->name }}</h3>
                             <h6 class="font-weight-normal mb-0">Yuk mulai manajemen data kamu di
-                                <span class="text-primary">Manajemen Data Admin</span>
+                                <span class="text-primary"><b>Manajemen Data Admin</b></span>
                             </h6>
                         </div>
                         <div class="col-12 col-xl-4">
@@ -78,22 +78,22 @@
                         <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-tale">
                                 <div class="card-body">
-                                    <a href="" class="link-manage text-white">
+                                    <a href="{{ route('admin.employee') }}" class="link-manage text-white">
                                         <p class="mb-4">Manage Employee</p>
                                     </a>
-                                    <p class="fs-30 mb-2">4006</p>
-                                    <p>10.00% (30 days)</p>
+                                    <p class="fs-30 mb-2">25</p>
+                                    <p class="mt-3">Total data Employee</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4 stretch-card transparent">
-                            <div class="card card-dark-blue">
+                            <div class="card card-light-danger">
                                 <div class="card-body">
-                                    <a href="" class="link-manage text-white">
+                                    <a href="{{ route('admin.employee-type') }}" class="link-manage text-white">
                                         <p class="mb-4">Manage Employee Type</p>
                                     </a>
-                                    <p class="fs-30 mb-2">61344</p>
-                                    <p>22.00% (30 days)</p>
+                                    <p class="fs-30 mb-2">12</p>
+                                    <p class="mt-3">Total data Employee Type</p>
                                 </div>
                             </div>
                         </div>
@@ -105,57 +105,8 @@
                                     <a href="{{ route('admin.akademik') }}" class="link-manage text-white">
                                         <p class="mb-4">Manage Akademik</p>
                                     </a>
-                                    <p class="fs-30 mb-2">34040</p>
-                                    <p>2.00% (30 days)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 stretch-card transparent">
-                            <div class="card card-light-danger">
-                                <div class="card-body">
-                                    <a href="" class="link-manage text-white">
-                                        <p class="mb-4">Manage User</p>
-                                    </a>
-                                    <p class="fs-30 mb-2">47033</p>
-                                    <p>0.22% (30 days)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 grid-margin stretch-card">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="card-title">Table data Pegawai</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="table-responsive">
-                                        <table id="example" class="display expandable-table" style="width:100%">
-                                            <thead>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Name</th>
-                                                    <th>Nidn</th>
-                                                    <th>Gender</th>
-                                                    <th>Employee Type</th>
-                                                    <th>Email</th>
-                                                    <th>Address</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Taufik Hidayat</td>
-                                                <td>362055401019</td>
-                                                <td>Male</td>
-                                                <td>Staff</td>
-                                                <td>taufik@email.com</td>
-                                                <td>Banyuwangi - Rogojampi</td>
-                                            </tr>
-                                        </table>
-                                    </div>
+                                    <p class="fs-30 mb-2">9</p>
+                                    <p class="mt-3">Total data Akademik</p>
                                 </div>
                             </div>
                         </div>

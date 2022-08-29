@@ -37,12 +37,25 @@
                     <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
                     <a class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
+                            <div class="preview-icon bg-info">
+                                <i class="ti-user mx-0"></i>
+                            </div>
+                        </div>
+                        <div class="preview-item-content">
+                            <h6 class="preview-subject font-weight-normal">User Admin</h6>
+                            <p class="font-weight-light small-text mb-0 text-muted">
+                                {{ Auth::user()->name }}
+                            </p>
+                        </div>
+                    </a>
+                    <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
                             <div class="preview-icon bg-success">
                                 <i class="ti-info-alt mx-0"></i>
                             </div>
                         </div>
                         <div class="preview-item-content">
-                            <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                            <h6 class="preview-subject font-weight-normal">Web Information</h6>
                             <p class="font-weight-light small-text mb-0 text-muted">
                                 Just now
                             </p>
@@ -57,20 +70,7 @@
                         <div class="preview-item-content">
                             <h6 class="preview-subject font-weight-normal">Settings</h6>
                             <p class="font-weight-light small-text mb-0 text-muted">
-                                Private message
-                            </p>
-                        </div>
-                    </a>
-                    <a class="dropdown-item preview-item">
-                        <div class="preview-thumbnail">
-                            <div class="preview-icon bg-info">
-                                <i class="ti-user mx-0"></i>
-                            </div>
-                        </div>
-                        <div class="preview-item-content">
-                            <h6 class="preview-subject font-weight-normal">New user registration</h6>
-                            <p class="font-weight-light small-text mb-0 text-muted">
-                                2 days ago
+                                Already up to date
                             </p>
                         </div>
                     </a>
@@ -81,14 +81,13 @@
                     <img src="{{ asset('admin/images/faces/profile-pict.png') }}" alt="profile" />
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                    <a class="dropdown-item">
-                        <i class="ti-settings text-primary"></i>
-                        Settings
+                    <a class="dropdown-item" href="/">
+                        <i class="ti-home text-primary"></i>
+                        Beranda
                     </a>
 
-                    <form class=" dropdown-item" method="POST" action="{{ route('logout') }}">
+                    <form class="dropdown-item" method="POST" action="{{ route('logout') }}">
                         @csrf
-
                         <a class="nav-link" href="/logout"
                             onclick="event.preventDefault();
                     this.closest('form').submit();"><i
@@ -96,11 +95,11 @@
                     </form>
                 </div>
             </li>
-            <li class="nav-item nav-settings d-none d-lg-flex">
+            {{-- <li class="nav-item nav-settings d-none d-lg-flex">
                 <a class="nav-link" href="#">
                     <i class="icon-ellipsis"></i>
                 </a>
-            </li>
+            </li> --}}
         </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
             data-toggle="offcanvas">
