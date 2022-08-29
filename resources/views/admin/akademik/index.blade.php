@@ -1,7 +1,7 @@
 @extends('admin.layouts.base-admin')
 
 @section('title')
-    <title>SIMPEG | Dashboard Admin</title>
+    <title>SIMPEG | Manajemen Akademik</title>
 
     @php
     // fungsi konversi data tipe date ke tanggal
@@ -23,8 +23,7 @@
                     <div class="row">
                         <div class="col-12 col-xl-8 mb-4 mb-xl-0">
                             <h3 class="font-weight-bold">Selamat datang {{ Auth::user()->name }}</h3>
-                            <h6 class="font-weight-normal mb-0">Yuk mulai manajemen data kamu di
-                                <span class="text-primary">Manajemen Data Admin</span>
+                            <h6 class="font-weight-normal mb-0">Yuk mulai manajemen data Akademik kamu bersama kami.
                             </h6>
                         </div>
                         <div class="col-12 col-xl-4">
@@ -55,80 +54,15 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 grid-margin stretch-card">
-                    <div class="card tale-bg">
-                        <div class="card-people mt-auto">
-                            <img src="{{ asset('admin/images/dashboard/people.svg') }}" alt="people">
-                            <div class="weather-info">
-                                <div class="d-flex">
-                                    <div>
-                                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>C</sup></h2>
-                                    </div>
-                                    <div class="ml-2">
-                                        <h4 class="location font-weight-normal">Banyuwangi</h4>
-                                        <h6 class="font-weight-normal">Indonesia</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 grid-margin transparent">
-                    <div class="row">
-                        <div class="col-md-6 mb-4 stretch-card transparent">
-                            <div class="card card-tale">
-                                <div class="card-body">
-                                    <a href="" class="link-manage text-white">
-                                        <p class="mb-4">Manage Employee</p>
-                                    </a>
-                                    <p class="fs-30 mb-2">4006</p>
-                                    <p>10.00% (30 days)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4 stretch-card transparent">
-                            <div class="card card-dark-blue">
-                                <div class="card-body">
-                                    <a href="" class="link-manage text-white">
-                                        <p class="mb-4">Manage Employee Type</p>
-                                    </a>
-                                    <p class="fs-30 mb-2">61344</p>
-                                    <p>22.00% (30 days)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                            <div class="card card-light-blue">
-                                <div class="card-body">
-                                    <a href="{{ route('admin.akademik') }}" class="link-manage text-white">
-                                        <p class="mb-4">Manage Akademik</p>
-                                    </a>
-                                    <p class="fs-30 mb-2">34040</p>
-                                    <p>2.00% (30 days)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 stretch-card transparent">
-                            <div class="card card-light-danger">
-                                <div class="card-body">
-                                    <a href="" class="link-manage text-white">
-                                        <p class="mb-4">Manage User</p>
-                                    </a>
-                                    <p class="fs-30 mb-2">47033</p>
-                                    <p>0.22% (30 days)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-md-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <p class="card-title">Table data Pegawai</p>
+                            <p class="card-title">Table data Akademik</p>
+                            {{-- Button Tambah --}}
+                            <a href="" type="button" class="btn btn-primary btn-icon-text mb-3">
+                                <i class="ti-plus btn-icon-prepend mdi mdi-plus"></i>
+                                Tambah
+                            </a>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="table-responsive">
@@ -142,7 +76,7 @@
                                                     <th>Employee Type</th>
                                                     <th>Email</th>
                                                     <th>Address</th>
-                                                    <th></th>
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tr>
@@ -153,6 +87,8 @@
                                                 <td>Staff</td>
                                                 <td>taufik@email.com</td>
                                                 <td>Banyuwangi - Rogojampi</td>
+                                                <td><a href="" class="link-manage">Edit</a> | <a href=""
+                                                        class="link-manage">Delete</a></td>
                                             </tr>
                                         </table>
                                     </div>

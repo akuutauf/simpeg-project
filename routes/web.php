@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\KepegawaianPage;
+use App\Http\Controllers\ManajemenAkademik;
+use App\Http\Controllers\ManajemenEmployee;
+use App\Http\Controllers\ManajemenEmployeeType;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,9 +35,22 @@ Route::middleware(['auth'])->group(function () {
         return view('admin.index');
     })->middleware(['auth'])->name('dashboard');
 
-    Route::get('/dashboard-admin', function () {
-        return view('admin.index');
-    })->middleware(['auth'])->name('dashboard');
+    // contoh route event
+    Route::get('/index/event', [ManajemenEvent::class, 'index'])->name('admin.event');
+    Route::get('/create/event', [ManajemenEvent::class, 'create'])->name('admin.create.event');
+    Route::post('/store/event', [ManajemenEvent::class, 'store'])->name('admin.store.event');
+    Route::get('/edit/{id}/event', [ManajemenEvent::class, 'edit'])->name('admin.edit.event');
+    Route::post('/update/{id}/event', [ManajemenEvent::class, 'update'])->name('admin.update.event');
+    Route::get('/destroy/{id}/event', [ManajemenEvent::class, 'destroy'])->name('admin.delete.event');
+
+    // akademik
+    Route::get('/index/akademik', [ManajemenAkademik::class, 'index'])->name('admin.akademik');
+
+    // employee
+    Route::get('/index/employee', [ManajemenEmployee::class, 'index'])->name('admin.employee');
+
+    // employee type
+    Route::get('/index/employee-type', [ManajemenEmployeeType::class, 'index'])->name('admin.employee-type');
 });
 
 require __DIR__ . '/auth.php';

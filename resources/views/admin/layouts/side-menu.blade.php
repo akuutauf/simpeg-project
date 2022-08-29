@@ -2,7 +2,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
         <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{ route('dashboard') }}">
                 <i class="icon-grid menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
             </a>
@@ -10,32 +10,25 @@
         <hr>
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-                <i class="icon-grid-2 menu-icon"></i>
-                <span class="menu-title">Tables</span>
+                <i class="icon-archive menu-icon"></i>
+                <span class="menu-title">Manage</span>
                 <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="tables">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="">Akademik
-                        </a></li>
-                </ul>
-            </div>  
-            <div class="collapse" id="tables">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link"
-                            href="{{ asset('admin/pages/tables/basic-table.html') }}">Basic
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('admin.akademik') }}">Akademik
                         </a></li>
                 </ul>
             </div>
             <div class="collapse" id="tables">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="">Employee
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('admin.employee') }}">Employee
                         </a></li>
                 </ul>
             </div>
             <div class="collapse" id="tables">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="">Employee Type
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('admin.employee-type') }}">Employee Type
                         </a></li>
                 </ul>
             </div>
@@ -73,73 +66,6 @@
                             Elements</a></li>
                 </ul>
             </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-                <i class="icon-bar-graph menu-icon"></i>
-                <span class="menu-title">Charts</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="charts">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link"
-                            href="{{ asset('admin/pages/charts/chartjs.html') }}">ChartJs</a></li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
-                <i class="icon-contract menu-icon"></i>
-                <span class="menu-title">Icons</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="icons">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{ asset('admin/pages/icons/mdi.html') }}">Mdi
-                            icons</a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                <i class="icon-head menu-icon"></i>
-                <span class="menu-title">User Pages</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{ asset('admin/pages/samples/login.html') }}">
-                            Login </a>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link"
-                            href="{{ asset('admin/pages/samples/register.html') }}">
-                            Register </a></li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
-                <i class="icon-ban menu-icon"></i>
-                <span class="menu-title">Error pages</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="error">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link"
-                            href="{{ asset('admin/pages/samples/error-404.html') }}"> 404
-                        </a></li>
-                    <li class="nav-item"> <a class="nav-link"
-                            href="{{ asset('admin/pages/samples/error-500.html') }}"> 500
-                        </a></li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ asset('admin/pages/documentation/documentation.html') }}">
-                <i class="icon-paper menu-icon"></i>
-                <span class="menu-title">Documentation</span>
-            </a>
         </li>
     </ul>
 </nav>
