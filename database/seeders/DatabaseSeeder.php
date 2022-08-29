@@ -1,9 +1,8 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\Dosen;
-use App\Models\JabatanSeed;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,8 +21,8 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         $this->call([
-            Dosen::class,
-            JabatanSeed::class
+            EmployeeTypeSeeder::class,
+            EmployeeSeeder::class
         ]);
     }
 }

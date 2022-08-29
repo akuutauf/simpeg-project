@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\Simpeg\JabatanController;
 use App\Http\Controllers\API\Simpeg\DosenController;
+use App\Http\Controllers\API\Employee\EmployeeController;
+use App\Http\Controllers\API\Employee\EmployeeTypeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +28,8 @@ Route::prefix('v1')->group(function () {
 
 
     Route::get('dosen', [DosenController::class, 'getData']);
+
+    Route::get('employee', [EmployeeController::class, 'getData']);
+    Route::get('employeetype', [EmployeeTypeController::class, 'getData']);
 
 });

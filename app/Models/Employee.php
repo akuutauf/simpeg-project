@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Dosen extends Model
+class Employee extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    protected $table = 'dosens';
-    public function jabatanSeed()
+    public function employeeType()
     {
-        return $this->belongsTo(JabatanSeed::class);
+        return $this->belongsTo(EmployeeType::class);
     }
 }
