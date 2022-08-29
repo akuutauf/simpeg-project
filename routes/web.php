@@ -22,9 +22,17 @@ Route::get('/kepegawaian', function () {
     return view('layouts.pages.kepegawaian');
 });
 
+Route::get('/akademik', function () {
+    return view('layouts.pages.akademik');
+});
+
 // middleware for admin page
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
+        return view('admin.index');
+    })->middleware(['auth'])->name('dashboard');
+
+    Route::get('/dashboard-admin', function () {
         return view('admin.index');
     })->middleware(['auth'])->name('dashboard');
 });

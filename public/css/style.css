@@ -60,6 +60,10 @@ body {
     color: #7978e9;
 }
 
+.link-manage {
+    text-decoration: none !important;
+}
+
 /* Colors */
 /* #F5F7FF;
  #7978E9;
