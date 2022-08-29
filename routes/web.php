@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\KepegawaianPage;
+use App\Http\Controllers\DashboardAdmin;
 use App\Http\Controllers\ManajemenAkademik;
 use App\Http\Controllers\ManajemenEmployee;
 use App\Http\Controllers\ManajemenEmployeeType;
@@ -31,9 +31,9 @@ Route::get('/akademik', function () {
 
 // middleware for admin page
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin.index');
-    })->middleware(['auth'])->name('dashboard');
+
+    // admin
+    Route::get('/dashboard', [DashboardAdmin::class, 'index'])->name('dashboard');
 
     // contoh route event
     Route::get('/index/event', [ManajemenEvent::class, 'index'])->name('admin.event');
@@ -45,6 +45,8 @@ Route::middleware(['auth'])->group(function () {
 
     // akademik
     Route::get('/index/akademik', [ManajemenAkademik::class, 'index'])->name('admin.akademik');
+    Route::get('/create/akademik', [ManajemenAkademik::class, 'create'])->name('admin.create.akademik');
+    Route::post('/store/akademik', [ManajemenAkademik::class, 'store'])->name('admin.store.akademik');
 
     // employee
     Route::get('/index/employee', [ManajemenEmployee::class, 'index'])->name('admin.employee');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\EmployeeType;
 use Illuminate\Http\Request;
 
 class ManajemenEmployeeType extends Controller
@@ -13,10 +14,10 @@ class ManajemenEmployeeType extends Controller
      */
     public function index()
     {
-        // $data = [
-        //     'akademik' => akademik::all()
-        // ];
-        return view('admin.employee-type.index');
+        $data = [
+            'employeeType' => EmployeeType::all()
+        ];
+        return view('admin.employee-type.index', $data);
     }
 
     /**

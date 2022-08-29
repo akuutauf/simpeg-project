@@ -76,24 +76,24 @@
                 <div class="col-md-6 grid-margin transparent">
                     <div class="row">
                         <div class="col-md-6 mb-4 stretch-card transparent">
+                            <div class="card card-light-danger">
+                                <div class="card-body">
+                                    <a href="{{ route('admin.akademik') }}" class="link-manage text-white">
+                                        <p class="mb-4">Manage Akademik</p>
+                                    </a>
+                                    <p class="fs-30 mb-2">10</p>
+                                    <p class="mt-3">Total data Akademik</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-tale">
                                 <div class="card-body">
                                     <a href="{{ route('admin.employee') }}" class="link-manage text-white">
                                         <p class="mb-4">Manage Employee</p>
                                     </a>
-                                    <p class="fs-30 mb-2">25</p>
+                                    <p class="fs-30 mb-2">{{ $employee }}</p>
                                     <p class="mt-3">Total data Employee</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4 stretch-card transparent">
-                            <div class="card card-light-danger">
-                                <div class="card-body">
-                                    <a href="{{ route('admin.employee-type') }}" class="link-manage text-white">
-                                        <p class="mb-4">Manage Employee Type</p>
-                                    </a>
-                                    <p class="fs-30 mb-2">12</p>
-                                    <p class="mt-3">Total data Employee Type</p>
                                 </div>
                             </div>
                         </div>
@@ -102,11 +102,11 @@
                         <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                             <div class="card card-light-blue">
                                 <div class="card-body">
-                                    <a href="{{ route('admin.akademik') }}" class="link-manage text-white">
-                                        <p class="mb-4">Manage Akademik</p>
+                                    <a href="{{ route('admin.employee-type') }}" class="link-manage text-white">
+                                        <p class="mb-4">Manage Employee Type</p>
                                     </a>
-                                    <p class="fs-30 mb-2">9</p>
-                                    <p class="mt-3">Total data Akademik</p>
+                                    <p class="fs-30 mb-2">{{ $employee_type }}</p>
+                                    <p class="mt-3">Total data Employee Type</p>
                                 </div>
                             </div>
                         </div>

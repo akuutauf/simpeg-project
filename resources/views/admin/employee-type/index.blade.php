@@ -72,26 +72,26 @@
                                             <thead>
                                                 <tr>
                                                     <th>No</th>
-                                                    <th>Name</th>
-                                                    <th>Nidn</th>
-                                                    <th>Gender</th>
-                                                    <th>Employee Type</th>
-                                                    <th>Email</th>
-                                                    <th>Address</th>
-                                                    <th>Action</th>
+                                                    <th width="40%">Name</th>
+                                                    <th width="40%">Aksi</th>
                                                 </tr>
                                             </thead>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Taufik Hidayat</td>
-                                                <td>362055401019</td>
-                                                <td>Male</td>
-                                                <td>Staff</td>
-                                                <td>taufik@email.com</td>
-                                                <td>Banyuwangi - Rogojampi</td>
-                                                <td><a href="" class="link-manage">Edit</a> | <a href=""
-                                                        class="link-manage">Delete</a></td>
-                                            </tr>
+                                            @php
+                                                $no = 1;
+                                            @endphp
+                                            @foreach ($employeeType as $item)
+                                                <tr>
+                                                    <td>{{ $no }}</td>
+                                                    <td>{{ $item->name }}</td>
+                                                    <td>
+                                                        <a href="" class="link-manage">Edit</a> | <a href=""
+                                                            class="link-manage">Delete</a>
+                                                    </td>
+                                                </tr>
+                                                @php
+                                                    $no++;
+                                                @endphp
+                                            @endforeach
                                         </table>
                                     </div>
                                 </div>

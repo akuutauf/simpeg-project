@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employee;
 use Illuminate\Http\Request;
 
 class ManajemenEmployee extends Controller
@@ -13,10 +14,10 @@ class ManajemenEmployee extends Controller
      */
     public function index()
     {
-        // $data = [
-        //     'akademik' => akademik::all()
-        // ];
-        return view('admin.employee.index');
+        $data = [
+            'employee' => Employee::all()
+        ];
+        return view('admin.employee.index', $data);
     }
 
     /**

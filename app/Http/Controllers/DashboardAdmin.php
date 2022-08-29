@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employee;
+use App\Models\EmployeeType;
 use Illuminate\Http\Request;
 
-class ManajemenAkademik extends Controller
+class DashboardAdmin extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,10 +15,11 @@ class ManajemenAkademik extends Controller
      */
     public function index()
     {
-        // $data = [
-        //     'akademik' => akademik::all()
-        // ];
-        return view('admin.akademik.index');
+        // $akademik = Akademik::count();
+        $employee = Employee::count();
+        $employee_type = EmployeeType::count();
+
+        return view('admin.index', compact('employee', 'employee_type'));
     }
 
     /**
@@ -26,10 +29,7 @@ class ManajemenAkademik extends Controller
      */
     public function create()
     {
-        // $data = [
-        //     'action' => route('admin.store.akademik')
-        // ];
-        // return view('admin.akademik.create', $data);
+        //
     }
 
     /**

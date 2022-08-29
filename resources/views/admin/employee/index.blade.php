@@ -77,20 +77,33 @@
                                                     <th>Employee Type</th>
                                                     <th>Email</th>
                                                     <th>Address</th>
-                                                    <th>Action</th>
+                                                    <th width="15%">Action</th>
                                                 </tr>
                                             </thead>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Taufik Hidayat</td>
-                                                <td>362055401019</td>
-                                                <td>Male</td>
-                                                <td>Staff</td>
-                                                <td>taufik@email.com</td>
-                                                <td>Banyuwangi - Rogojampi</td>
-                                                <td><a href="" class="link-manage">Edit</a> | <a href=""
-                                                        class="link-manage">Delete</a></td>
-                                            </tr>
+                                            @php
+                                                $no = 1;
+                                            @endphp
+                                            @foreach ($employee as $item)
+                                                <tr>
+                                                    <td>{{ $no }}</td>
+                                                    <td>{{ $item->name }}</td>
+                                                    <td>{{ !isset($item->nidn) ? 'Kosong' : $item->nidn }}
+                                                    </td>
+                                                    <td>{{ $item->gender == 'L' ? 'Laki-laki' : 'Perempuan' }}</td>
+                                                    <td>{{ $item->employeeType->name }}</td>
+                                                    <td>{{ $item->email }}</td>
+                                                    <td>{{ $item->address }}</td>
+                                                    <td>
+                                                        <center>
+                                                            <a href="" class="link-manage">Edit</a> | <a
+                                                                href="" class="link-manage">Delete</a>
+                                                        </center>
+                                                    </td>
+                                                </tr>
+                                                @php
+                                                    $no++;
+                                                @endphp
+                                            @endforeach
                                         </table>
                                     </div>
                                 </div>
