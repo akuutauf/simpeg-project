@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KepegawaianPage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +30,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+
+// https://api-sister.herokuapp.com/api/v1/
+
+// Route::get('/kepegawaian', [KepegawaianPage::class, 'index'])->name('kepegawaian');

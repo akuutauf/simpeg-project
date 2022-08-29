@@ -33,6 +33,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            {{-- @foreach ($api as $data) --}}
                             <tr>
                                 <th scope="row">1</th>
                                 <td>Andy</td>
@@ -40,20 +41,7 @@
                                 <td scope="col">andy@email.com</td>
                                 <td scope="col">Banyuwangi</td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Bambang</td>
-                                <td>Karyawan</td>
-                                <td scope="col">bambang@email.com</td>
-                                <td scope="col">Banyuwangi</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Agus</td>
-                                <td>Karyawan</td>
-                                <td scope="col">agus@email.com</td>
-                                <td scope="col">Banyuwangi</td>
-                            </tr>
+                            {{-- @endforeach --}}
                         </tbody>
                     </table>
                 </div>
