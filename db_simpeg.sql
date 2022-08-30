@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Waktu pembuatan: 29 Agu 2022 pada 16.26
+-- Waktu pembuatan: 30 Agu 2022 pada 08.30
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -88,7 +88,8 @@ CREATE TABLE `employees` (
 INSERT INTO `employees` (`id`, `employee_type_id`, `nip`, `nidn`, `name`, `gender`, `phone`, `email`, `birthplace`, `birthdate`, `religion`, `address`, `city`, `district`, `province`, `nationality`, `postal_code`, `back_degree`, `front_degree`, `created_at`, `updated_at`) VALUES
 (1, 1, '198711032021212001', NULL, 'Dian Mujiani', 'P', '085333859623', 'dianmjn@poliwangi.ac.id', 'Banyuwangi', NULL, 'Islam', 'Jl. Ikan Cakalang 31 Banyuwangi', 'Banyuwangi', 'Banyuwangi', 'Jawa Timur', 'Indonesia', '', 'SE.', NULL, NULL, NULL),
 (2, 2, '199209052022031004', '0005099204', 'Galih Hendra Wibowo', 'L', '083831120642', 'galih@poliwangi.ac.id', 'Banyuwangi', NULL, 'Islam', 'Surabaya, Jl Ahmad 3 No.15 Rt.01 RW.10 \r\nPepe Legi Waru Sidoarjo', 'Banyuwangi', 'Banyuwangi', 'Jawa Timur', 'Indonesia', '', 'S.Tr.Kom., M.T.', NULL, NULL, NULL),
-(3, 4, '198403052021212004', '0705038402', 'Dianni Yusuf', 'P', '082328333399', 'dianniyusuf@poliwangi.ac.id', 'Banyuwangi', NULL, 'Islam', 'Dsn. Gembolo Rt/Rw 01/01 Purwodadi - \r\nGambiran Banyuwangi 68486', 'Banyuwangi', 'Banyuwangi', 'Jawa Timur', 'Indonesia', '', 'S.Kom., M.Kom.', NULL, NULL, NULL);
+(3, 4, '198403052021212004', '0705038402', 'Dianni Yusuf', 'P', '082328333399', 'dianniyusuf@poliwangi.ac.id', 'Banyuwangi', NULL, 'Islam', 'Dsn. Gembolo Rt/Rw 01/01 Purwodadi - \r\nGambiran Banyuwangi 68486', 'Banyuwangi', 'Banyuwangi', 'Jawa Timur', 'Indonesia', '', 'S.Kom., M.Kom.', NULL, NULL, NULL),
+(5, 2, '362055401019', NULL, 'Taufik Hidayat', 'L', '082131242590', 'taufikhidayat09121@gmail.com', 'Banyuwangi', '2001-09-12', 'Islam', 'Puspan\r\nRogojampi', 'Banyuwangi', 'Banyuwangi', 'Jawa Timur', 'Indonesia', '68462', NULL, NULL, '2022-08-29 20:14:39', '2022-08-29 20:14:39');
 
 -- --------------------------------------------------------
 
@@ -111,7 +112,8 @@ INSERT INTO `employee_types` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (1, 'Admin Jurusan', NULL, NULL),
 (2, 'Dosen Jurusan', NULL, NULL),
 (3, 'Teknisi Lab', NULL, NULL),
-(4, 'Kaprodi Jurusan', NULL, NULL);
+(4, 'Kaprodi Jurusan', NULL, NULL),
+(5, 'Asisten Dosen', '2022-08-29 22:35:41', '2022-08-29 22:48:33');
 
 -- --------------------------------------------------------
 
@@ -145,6 +147,34 @@ CREATE TABLE `jabatan_seeds` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `jurusans`
+--
+
+CREATE TABLE `jurusans` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `Nama_Jurusan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `mahasiswas`
+--
+
+CREATE TABLE `mahasiswas` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `NIM` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Nama` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Alamat` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `migrations`
 --
 
@@ -166,7 +196,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (5, '2022_08_25_182548_create_jabatan_seeds_table', 2),
 (6, '2022_08_25_183014_create_dosens_table', 2),
 (7, '2022_08_28_165709_create_employee_types_table', 2),
-(8, '2022_08_28_171935_create_employees_table', 2);
+(8, '2022_08_28_171935_create_employees_table', 2),
+(9, '2022_08_30_062702_create_jurusans_table', 3),
+(10, '2022_08_30_062713_create_prodis_table', 3),
+(11, '2022_08_30_062720_create_mahasiswas_table', 3);
 
 -- --------------------------------------------------------
 
@@ -195,6 +228,19 @@ CREATE TABLE `personal_access_tokens` (
   `abilities` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `last_used_at` timestamp NULL DEFAULT NULL,
   `expires_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `prodis`
+--
+
+CREATE TABLE `prodis` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `Nama_Prodi` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -262,6 +308,18 @@ ALTER TABLE `jabatan_seeds`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `jurusans`
+--
+ALTER TABLE `jurusans`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `mahasiswas`
+--
+ALTER TABLE `mahasiswas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
@@ -280,6 +338,12 @@ ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
+
+--
+-- Indeks untuk tabel `prodis`
+--
+ALTER TABLE `prodis`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `users`
@@ -302,13 +366,13 @@ ALTER TABLE `dosens`
 -- AUTO_INCREMENT untuk tabel `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `employee_types`
 --
 ALTER TABLE `employee_types`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
@@ -323,15 +387,33 @@ ALTER TABLE `jabatan_seeds`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT untuk tabel `jurusans`
+--
+ALTER TABLE `jurusans`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `mahasiswas`
+--
+ALTER TABLE `mahasiswas`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `prodis`
+--
+ALTER TABLE `prodis`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --

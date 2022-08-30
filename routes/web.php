@@ -45,8 +45,6 @@ Route::middleware(['auth'])->group(function () {
 
     // akademik
     Route::get('/index/akademik', [ManajemenAkademik::class, 'index'])->name('admin.akademik');
-    Route::get('/create/akademik', [ManajemenAkademik::class, 'create'])->name('admin.create.akademik');
-    Route::post('/store/akademik', [ManajemenAkademik::class, 'store'])->name('admin.store.akademik');
 
     // employee
     Route::get('/index/employee', [ManajemenEmployee::class, 'index'])->name('admin.employee');
