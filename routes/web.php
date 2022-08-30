@@ -58,6 +58,11 @@ Route::middleware(['auth'])->group(function () {
 
     // employee type
     Route::get('/index/employee-type', [ManajemenEmployeeType::class, 'index'])->name('admin.employee-type');
+    Route::get('/create/employee-type', [ManajemenEmployeeType::class, 'create'])->name('admin.create.employee-type');
+    Route::post('/store/employee-type', [ManajemenEmployeeType::class, 'store'])->name('admin.store.employee-type');
+    Route::get('/edit/{id}/employee-type', [ManajemenEmployeeType::class, 'edit'])->name('admin.edit.employee-type');
+    Route::post('/update/{id}/employee-type', [ManajemenEmployeeType::class, 'update'])->name('admin.update.employee-type');
+    Route::get('/destroy/{id}/employee-type', [ManajemenEmployeeType::class, 'destroy'])->name('admin.delete.employee-type');
 });
 
 require __DIR__ . '/auth.php';

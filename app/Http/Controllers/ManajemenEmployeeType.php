@@ -27,7 +27,11 @@ class ManajemenEmployeeType extends Controller
      */
     public function create()
     {
-        //
+        $data = [
+            'action' => route('admin.store.employee-type')
+        ];
+
+        return view('admin.employee-type.create', $data);
     }
 
     /**
@@ -38,7 +42,8 @@ class ManajemenEmployeeType extends Controller
      */
     public function store(Request $request)
     {
-        //
+        EmployeeType::create($request->all());
+        return redirect()->route('admin.employee-type');
     }
 
     /**
@@ -60,7 +65,12 @@ class ManajemenEmployeeType extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = [
+            'employee_type'  => EmployeeType::find($id),
+            'action' => route('admin.update.employee-type', $id)
+        ];
+
+        return view('admin.employee-type.form', $data);
     }
 
     /**
@@ -70,9 +80,10 @@ class ManajemenEmployeeType extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        EmployeeType::where('id', $request->id)->update($request->only(['name']));
+        return redirect()->route('admin.employee-type');
     }
 
     /**
@@ -83,6 +94,7 @@ class ManajemenEmployeeType extends Controller
      */
     public function destroy($id)
     {
-        //
+        EmployeeType::where('id', $id)->delete();
+        return redirect()->route('admin.employee-type');
     }
 }

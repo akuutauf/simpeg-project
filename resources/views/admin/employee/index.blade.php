@@ -40,14 +40,6 @@
                                             </script>
                                         </i>
                                     </button>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
-                                        <a class="dropdown-item" href="#">January - February</a>
-                                        <a class="dropdown-item" href="#">March - April</a>
-                                        <a class="dropdown-item" href="#">May - June</a>
-                                        <a class="dropdown-item" href="#">August - September</a>
-                                        <a class="dropdown-item" href="#">October - November</a>
-                                        <a class="dropdown-item" href="#">December - January</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -41,14 +41,6 @@
                                             </script>
                                         </i>
                                     </button>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
-                                        <a class="dropdown-item" href="#">January - February</a>
-                                        <a class="dropdown-item" href="#">March - April</a>
-                                        <a class="dropdown-item" href="#">May - June</a>
-                                        <a class="dropdown-item" href="#">August - September</a>
-                                        <a class="dropdown-item" href="#">October - November</a>
-                                        <a class="dropdown-item" href="#">December - January</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +53,8 @@
                         <div class="card-body">
                             <p class="card-title">Table data Employee Type</p>
                             {{-- Button Tambah --}}
-                            <a href="" type="button" class="btn btn-primary btn-icon-text mb-3">
+                            <a href="{{ route('admin.create.employee-type') }}" type="button"
+                                class="btn btn-primary btn-icon-text mb-3">
                                 <i class="ti-plus btn-icon-prepend mdi mdi-plus"></i>
                                 Tambah
                             </a>
@@ -73,6 +66,7 @@
                                                 <tr>
                                                     <th>No</th>
                                                     <th width="40%">Name</th>
+                                                    <th width="40%">Last Updated</th>
                                                     <th width="40%">Aksi</th>
                                                 </tr>
                                             </thead>
@@ -83,9 +77,14 @@
                                                 <tr>
                                                     <td>{{ $no }}</td>
                                                     <td>{{ $item->name }}</td>
+                                                    <td>{{ $item->updated_at == '' ? 'Not Yet' : $item->updated_at }}
+                                                    </td>
                                                     <td>
-                                                        <a href="" class="link-manage">Edit</a> | <a href=""
-                                                            class="link-manage">Delete</a>
+                                                        <a href="{{ route('admin.edit.employee-type', $item->id) }}"
+                                                            class="link-manage">Edit</a> | <a
+                                                            href="{{ route('admin.delete.employee-type', $item->id) }}"
+                                                            class="link-manage"
+                                                            onclick="return confirm('Apakah Anda yakin ingin menghapus data?');">Delete</a>
                                                     </td>
                                                 </tr>
                                                 @php
