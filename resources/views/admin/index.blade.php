@@ -40,22 +40,14 @@
                                             </script>
                                         </i>
                                     </button>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
-                                        <a class="dropdown-item" href="#">January - February</a>
-                                        <a class="dropdown-item" href="#">March - April</a>
-                                        <a class="dropdown-item" href="#">May - June</a>
-                                        <a class="dropdown-item" href="#">August - September</a>
-                                        <a class="dropdown-item" href="#">October - November</a>
-                                        <a class="dropdown-item" href="#">December - January</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6 grid-margin stretch-card">
+            <div class="row justify-content-around">
+                <div class="col-md-5 grid-margin stretch-card">
                     <div class="card tale-bg">
                         <div class="card-people mt-auto">
                             <img src="{{ asset('admin/images/dashboard/people.svg') }}" alt="people">
@@ -78,11 +70,35 @@
                         <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-light-danger">
                                 <div class="card-body">
-                                    <a href="{{ route('admin.akademik') }}" class="link-manage text-white">
-                                        <p class="mb-4">Manage Akademik</p>
+                                    <a href="" class="link-manage text-white">
+                                        <p class="mb-4">Manage Jurusan</p>
                                     </a>
                                     <p class="fs-30 mb-2">10</p>
                                     <p class="mt-3">Total data Akademik</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4 stretch-card transparent">
+                            <div class="card card-dark-blue">
+                                <div class="card-body">
+                                    <a href="" class="link-manage text-white">
+                                        <p class="mb-4">Manage Prodi</p>
+                                    </a>
+                                    <p class="fs-30 mb-2">{{ $employee }}</p>
+                                    <p class="mt-3">Total data Employee</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4 stretch-card transparent">
+                            <div class="card card-dark-blue">
+                                <div class="card-body">
+                                    <a href="" class="link-manage text-white">
+                                        <p class="mb-4">Manage Mahasiswa</p>
+                                    </a>
+                                    <p class="fs-30 mb-2">{{ $employee }}</p>
+                                    <p class="mt-3">Total data Employee</p>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +115,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
+                        <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-light-blue">
                                 <div class="card-body">
                                     <a href="{{ route('admin.employee-type') }}" class="link-manage text-white">

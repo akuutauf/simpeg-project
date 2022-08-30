@@ -4,6 +4,9 @@ use App\Http\Controllers\DashboardAdmin;
 use App\Http\Controllers\ManajemenAkademik;
 use App\Http\Controllers\ManajemenEmployee;
 use App\Http\Controllers\ManajemenEmployeeType;
+use App\Http\Controllers\ManajemenJurusan;
+use App\Http\Controllers\ManajemenMahasiswa;
+use App\Http\Controllers\ManajemenProdi;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,7 +47,16 @@ Route::middleware(['auth'])->group(function () {
     // Route::get('/destroy/{id}/event', [ManajemenEvent::class, 'destroy'])->name('admin.delete.event');
 
     // akademik
-    Route::get('/index/akademik', [ManajemenAkademik::class, 'index'])->name('admin.akademik');
+    // Route::get('/index/akademik', [ManajemenAkademik::class, 'index'])->name('admin.akademik');
+
+    // jurusan
+    Route::get('/index/jurusan', [ManajemenJurusan::class, 'index'])->name('admin.jurusan');
+
+    // prodi
+    Route::get('/index/prodi', [ManajemenProdi::class, 'index'])->name('admin.prodi');
+
+    // mahasiswa
+    Route::get('/index/mahasiswa', [ManajemenMahasiswa::class, 'index'])->name('admin.mahasiswa');
 
     // employee
     Route::get('/index/employee', [ManajemenEmployee::class, 'index'])->name('admin.employee');
