@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\DashboardAdmin;
-use App\Http\Controllers\ManajemenAkademik;
 use App\Http\Controllers\ManajemenEmployee;
 use App\Http\Controllers\ManajemenEmployeeType;
 use App\Http\Controllers\ManajemenJurusan;

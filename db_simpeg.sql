@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Waktu pembuatan: 30 Agu 2022 pada 10.05
+-- Waktu pembuatan: 30 Agu 2022 pada 12.22
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -296,7 +296,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Taufik Hidayat', 'taufikhidayat09121@gmail.com', NULL, '$2y$10$eufxH7o.fyCiaf3JwoApX.HQ7MZPAEatVWbjoo0Ho7AQEt1YHvLRe', NULL, '2022-08-24 06:18:42', '2022-08-24 06:18:42'),
-(2, 'Admin SIM', 'adminsim@gmail.com', NULL, '$2y$10$stgZqHF6rU/9F7tPYvXieuHq6kPmjHwtNgI8no5lOnNBQ5U1PukXW', NULL, '2022-08-24 06:19:18', '2022-08-24 06:19:18');
+(2, 'Admin SIM', 'adminsim@gmail.com', NULL, '$2y$10$stgZqHF6rU/9F7tPYvXieuHq6kPmjHwtNgI8no5lOnNBQ5U1PukXW', NULL, '2022-08-24 06:19:18', '2022-08-24 06:19:18'),
+(3, 'Admin', 'admin@gmail.com', NULL, '$2y$10$CpmMKVkxAMHMaSgDnlNxA.kVQqeLEYAc5VdIxFuDPh/DSwds7bCom', NULL, '2022-08-30 03:20:05', '2022-08-30 03:20:05');
 
 --
 -- Indexes for dumped tables
@@ -448,7 +449,7 @@ ALTER TABLE `prodis`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

@@ -86,12 +86,23 @@
                         Beranda
                     </a>
 
-                    <form class="dropdown-item" method="POST" action="{{ route('logout') }}">
+                    {{-- <form class="dropdown-item" method="POST" action="{{ route('logout') }}">
                         @csrf
                         <a class="nav-link" href="/logout"
                             onclick="event.preventDefault();
                     this.closest('form').submit();"><i
                                 class="ti-power-off text-primary"></i> Logout</a>
+                    </form> --}}
+
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        <i class="ti-power-off text-primary"></i>
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
                     </form>
                 </div>
             </li>

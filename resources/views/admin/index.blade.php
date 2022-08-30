@@ -70,7 +70,7 @@
                         <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-light-danger">
                                 <div class="card-body">
-                                    <a href="" class="link-manage text-white">
+                                    <a href="{{ route('admin.jurusan') }}" class="link-manage text-white">
                                         <p class="mb-4">Manage Jurusan</p>
                                     </a>
                                     <p class="fs-30 mb-2">{{ $jurusan }}</p>
@@ -81,7 +81,7 @@
                         <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-dark-blue">
                                 <div class="card-body">
-                                    <a href="" class="link-manage text-white">
+                                    <a href="{{ route('admin.prodi') }}" class="link-manage text-white">
                                         <p class="mb-4">Manage Prodi</p>
                                     </a>
                                     <p class="fs-30 mb-2">{{ $prodi }}</p>
@@ -94,7 +94,7 @@
                         <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-dark-blue">
                                 <div class="card-body">
-                                    <a href="" class="link-manage text-white">
+                                    <a href="{{ route('admin.mahasiswa') }}" class="link-manage text-white">
                                         <p class="mb-4">Manage Mahasiswa</p>
                                     </a>
                                     <p class="fs-30 mb-2">{{ $mahasiswa }}</p>
