@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Waktu pembuatan: 30 Agu 2022 pada 08.30
+-- Waktu pembuatan: 30 Agu 2022 pada 10.05
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -111,9 +111,9 @@ CREATE TABLE `employee_types` (
 INSERT INTO `employee_types` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (1, 'Admin Jurusan', NULL, NULL),
 (2, 'Dosen Jurusan', NULL, NULL),
-(3, 'Teknisi Lab', NULL, NULL),
 (4, 'Kaprodi Jurusan', NULL, NULL),
-(5, 'Asisten Dosen', '2022-08-29 22:35:41', '2022-08-29 22:48:33');
+(5, 'Asisten Dosen', '2022-08-29 22:35:41', '2022-08-29 22:48:33'),
+(7, 'Dosen', '2022-08-30 00:50:33', '2022-08-30 00:50:33');
 
 -- --------------------------------------------------------
 
@@ -157,6 +157,15 @@ CREATE TABLE `jurusans` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data untuk tabel `jurusans`
+--
+
+INSERT INTO `jurusans` (`id`, `Nama_Jurusan`, `created_at`, `updated_at`) VALUES
+(1, 'Teknik Informatika', NULL, NULL),
+(2, 'Teknik Sipil', NULL, '2022-08-30 00:31:36'),
+(4, 'Teknik Mesin Interaktif', '2022-08-30 00:26:23', '2022-08-30 00:26:23');
+
 -- --------------------------------------------------------
 
 --
@@ -171,6 +180,15 @@ CREATE TABLE `mahasiswas` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `mahasiswas`
+--
+
+INSERT INTO `mahasiswas` (`id`, `NIM`, `Nama`, `Alamat`, `created_at`, `updated_at`) VALUES
+(1, '362055401019', 'Taufik Hidayat', 'Dusun Puspan Desa Kedaleman, Rogojampi Kab Banyuwangi', NULL, NULL),
+(2, '362055401015', 'Dhicky Mahesya Tegar Surya Pramana', 'Banyuwangi', NULL, NULL),
+(4, '362055401010', 'Muhammad Ilham Nurisky', 'Bedewang - Songgon Jl. Iskandar Muda no 125', '2022-08-30 01:01:10', '2022-08-30 01:04:14');
 
 -- --------------------------------------------------------
 
@@ -244,6 +262,16 @@ CREATE TABLE `prodis` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `prodis`
+--
+
+INSERT INTO `prodis` (`id`, `Nama_Prodi`, `created_at`, `updated_at`) VALUES
+(1, 'Teknik Rekayasa Perangkat Lunak', NULL, NULL),
+(2, 'Teknik Rekayasa Komputer', NULL, NULL),
+(4, 'Teknik Mesin Interaktif', '2022-08-30 00:41:07', '2022-08-30 00:44:10'),
+(5, 'Teknik Sipil', '2022-08-30 00:41:32', '2022-08-30 00:41:32');
 
 -- --------------------------------------------------------
 
@@ -372,7 +400,7 @@ ALTER TABLE `employees`
 -- AUTO_INCREMENT untuk tabel `employee_types`
 --
 ALTER TABLE `employee_types`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
@@ -390,13 +418,13 @@ ALTER TABLE `jabatan_seeds`
 -- AUTO_INCREMENT untuk tabel `jurusans`
 --
 ALTER TABLE `jurusans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `mahasiswas`
 --
 ALTER TABLE `mahasiswas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
@@ -414,7 +442,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT untuk tabel `prodis`
 --
 ALTER TABLE `prodis`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
