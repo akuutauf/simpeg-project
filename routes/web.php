@@ -38,17 +38,6 @@ Route::middleware(['auth'])->group(function () {
     // admin
     Route::get('/dashboard', [DashboardAdmin::class, 'index'])->name('dashboard');
 
-    // contoh route event
-    // Route::get('/index/event', [ManajemenEvent::class, 'index'])->name('admin.event');
-    // Route::get('/create/event', [ManajemenEvent::class, 'create'])->name('admin.create.event');
-    // Route::post('/store/event', [ManajemenEvent::class, 'store'])->name('admin.store.event');
-    // Route::get('/edit/{id}/event', [ManajemenEvent::class, 'edit'])->name('admin.edit.event');
-    // Route::post('/update/{id}/event', [ManajemenEvent::class, 'update'])->name('admin.update.event');
-    // Route::get('/destroy/{id}/event', [ManajemenEvent::class, 'destroy'])->name('admin.delete.event');
-
-    // akademik
-    // Route::get('/index/akademik', [ManajemenAkademik::class, 'index'])->name('admin.akademik');
-
     // jurusan
     Route::get('/index/jurusan', [ManajemenJurusan::class, 'index'])->name('admin.jurusan');
     Route::get('/create/jurusan', [ManajemenJurusan::class, 'create'])->name('admin.create.jurusan');
@@ -67,6 +56,11 @@ Route::middleware(['auth'])->group(function () {
 
     // mahasiswa
     Route::get('/index/mahasiswa', [ManajemenMahasiswa::class, 'index'])->name('admin.mahasiswa');
+    Route::get('/create/mahasiswa', [ManajemenMahasiswa::class, 'create'])->name('admin.create.mahasiswa');
+    Route::post('/store/mahasiswa', [ManajemenMahasiswa::class, 'store'])->name('admin.store.mahasiswa');
+    Route::get('/edit/{id}/mahasiswa', [ManajemenMahasiswa::class, 'edit'])->name('admin.edit.mahasiswa');
+    Route::post('/update/{id}/mahasiswa', [ManajemenMahasiswa::class, 'update'])->name('admin.update.mahasiswa');
+    Route::get('/destroy/{id}/mahasiswa', [ManajemenMahasiswa::class, 'destroy'])->name('admin.delete.mahasiswa');
 
     // employee
     Route::get('/index/employee', [ManajemenEmployee::class, 'index'])->name('admin.employee');

@@ -15,7 +15,7 @@
                             <h4 class="card-title">
                                 Edit data jurusan
                             </h4>
-                            {{-- Employee Type Info --}}
+                            {{-- Jurusan Info --}}
                             <p class="card-description">
                                 Jurusan Info
                             </p>

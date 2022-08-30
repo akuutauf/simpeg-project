@@ -15,7 +15,7 @@
                             <h4 class="card-title">
                                 Edit data prodi
                             </h4>
-                            {{-- Employee Type Info --}}
+                            {{-- Prodi Info --}}
                             <p class="card-description">
                                 Prodi Info
                             </p>

@@ -27,7 +27,11 @@ class ManajemenMahasiswa extends Controller
      */
     public function create()
     {
-        //
+        $data = [
+            'action' => route('admin.store.mahasiswa')
+        ];
+
+        return view('admin.mahasiswa.create', $data);
     }
 
     /**
@@ -38,7 +42,8 @@ class ManajemenMahasiswa extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Mahasiswa::create($request->all());
+        return redirect()->route('admin.mahasiswa');
     }
 
     /**
@@ -60,7 +65,12 @@ class ManajemenMahasiswa extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = [
+            'mahasiswa'  => Mahasiswa::find($id),
+            'action' => route('admin.update.mahasiswa', $id)
+        ];
+
+        return view('admin.mahasiswa.form', $data);
     }
 
     /**
@@ -70,9 +80,10 @@ class ManajemenMahasiswa extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        Mahasiswa::where('id', $request->id)->update($request->only(['Nama', 'NIM', 'Alamat']));
+        return redirect()->route('admin.mahasiswa');
     }
 
     /**
@@ -83,6 +94,7 @@ class ManajemenMahasiswa extends Controller
      */
     public function destroy($id)
     {
-        //
+        Mahasiswa::where('id', $id)->delete();
+        return redirect()->route('admin.mahasiswa');
     }
 }

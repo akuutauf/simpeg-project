@@ -53,7 +53,7 @@
                         <div class="card-body">
                             <p class="card-title">Table data Mahasiswa</p>
                             {{-- Button Tambah --}}
-                            <a href="{{ route('admin.create.employee-type') }}" type="button"
+                            <a href="{{ route('admin.create.mahasiswa') }}" type="button"
                                 class="btn btn-primary btn-icon-text mb-3">
                                 <i class="ti-plus btn-icon-prepend mdi mdi-plus"></i>
                                 Tambah
@@ -82,9 +82,9 @@
                                                     <td>{{ $item->Alamat }}</td>
                                                     </td>
                                                     <td>
-                                                        <a href="{{ route('admin.edit.employee-type', $item->id) }}"
+                                                        <a href="{{ route('admin.edit.mahasiswa', $item->id) }}"
                                                             class="link-manage">Edit</a> | <a
-                                                            href="{{ route('admin.delete.employee-type', $item->id) }}"
+                                                            href="{{ route('admin.delete.mahasiswa', $item->id) }}"
                                                             class="link-manage"
                                                             onclick="return confirm('Apakah Anda yakin ingin menghapus data?');">Delete</a>
                                                     </td>
