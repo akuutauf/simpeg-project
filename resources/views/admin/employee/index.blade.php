@@ -70,7 +70,7 @@
                                                     <th>Employee Type</th>
                                                     <th>Email</th>
                                                     <th>Address</th>
-                                                    <th width="15%">Action</th>
+                                                    <th width="15%">Option</th>
                                                 </tr>
                                             </thead>
                                             @php

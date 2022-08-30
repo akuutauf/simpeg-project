@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Employee;
 use App\Models\EmployeeType;
+use App\Models\Jurusan;
+use App\Models\Mahasiswa;
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 
 class DashboardAdmin extends Controller
@@ -18,8 +21,11 @@ class DashboardAdmin extends Controller
         // $akademik = Akademik::count();
         $employee = Employee::count();
         $employee_type = EmployeeType::count();
+        $jurusan = Jurusan::count();
+        $prodi = Prodi::count();
+        $mahasiswa = Mahasiswa::count();
 
-        return view('admin.index', compact('employee', 'employee_type'));
+        return view('admin.index', compact('employee', 'employee_type', 'jurusan', 'prodi', 'mahasiswa'));
     }
 
     /**

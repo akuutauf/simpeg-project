@@ -16,12 +16,12 @@
             </a>
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="">Jurusan</a>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('admin.jurusan') }}">Jurusan</a>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="">Prodi</a>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('admin.prodi') }}">Prodi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Mahasiswa</a>
+                        <a class="nav-link" href="{{ route('admin.mahasiswa') }}">Mahasiswa</a>
                     </li>
                 </ul>
             </div>

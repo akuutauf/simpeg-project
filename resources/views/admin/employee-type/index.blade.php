@@ -67,7 +67,7 @@
                                                     <th>No</th>
                                                     <th width="40%">Name</th>
                                                     <th width="40%">Last Updated</th>
-                                                    <th width="40%">Aksi</th>
+                                                    <th width="40%">Option</th>
                                                 </tr>
                                             </thead>
                                             @php

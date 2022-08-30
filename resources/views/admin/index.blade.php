@@ -73,8 +73,8 @@
                                     <a href="" class="link-manage text-white">
                                         <p class="mb-4">Manage Jurusan</p>
                                     </a>
-                                    <p class="fs-30 mb-2">10</p>
-                                    <p class="mt-3">Total data Akademik</p>
+                                    <p class="fs-30 mb-2">{{ $jurusan }}</p>
+                                    <p class="mt-3">Total data Jurusan</p>
                                 </div>
                             </div>
                         </div>
@@ -84,8 +84,8 @@
                                     <a href="" class="link-manage text-white">
                                         <p class="mb-4">Manage Prodi</p>
                                     </a>
-                                    <p class="fs-30 mb-2">{{ $employee }}</p>
-                                    <p class="mt-3">Total data Employee</p>
+                                    <p class="fs-30 mb-2">{{ $prodi }}</p>
+                                    <p class="mt-3">Total data Prodi</p>
                                 </div>
                             </div>
                         </div>
@@ -97,8 +97,8 @@
                                     <a href="" class="link-manage text-white">
                                         <p class="mb-4">Manage Mahasiswa</p>
                                     </a>
-                                    <p class="fs-30 mb-2">{{ $employee }}</p>
-                                    <p class="mt-3">Total data Employee</p>
+                                    <p class="fs-30 mb-2">{{ $mahasiswa }}</p>
+                                    <p class="mt-3">Total data Mahasiswa</p>
                                 </div>
                             </div>
                         </div>

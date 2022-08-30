@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jurusan;
 use Illuminate\Http\Request;
 
 class ManajemenJurusan extends Controller
@@ -13,7 +14,10 @@ class ManajemenJurusan extends Controller
      */
     public function index()
     {
-        //
+        $data = [
+            'jurusan' => Jurusan::all()
+        ];
+        return view('admin.jurusan.index', $data);
     }
 
     /**

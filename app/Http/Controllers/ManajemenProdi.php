@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 
 class ManajemenProdi extends Controller
@@ -13,7 +14,10 @@ class ManajemenProdi extends Controller
      */
     public function index()
     {
-        //
+        $data = [
+            'prodi' => Prodi::all()
+        ];
+        return view('admin.prodi.index', $data);
     }
 
     /**
