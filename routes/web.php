@@ -51,6 +51,11 @@ Route::middleware(['auth'])->group(function () {
 
     // jurusan
     Route::get('/index/jurusan', [ManajemenJurusan::class, 'index'])->name('admin.jurusan');
+    Route::get('/create/jurusan', [ManajemenJurusan::class, 'create'])->name('admin.create.jurusan');
+    Route::post('/store/jurusan', [ManajemenJurusan::class, 'store'])->name('admin.store.jurusan');
+    Route::get('/edit/{id}/jurusan', [ManajemenJurusan::class, 'edit'])->name('admin.edit.jurusan');
+    Route::post('/update/{id}/jurusan', [ManajemenJurusan::class, 'update'])->name('admin.update.jurusan');
+    Route::get('/destroy/{id}/jurusan', [ManajemenJurusan::class, 'destroy'])->name('admin.delete.jurusan');
 
     // prodi
     Route::get('/index/prodi', [ManajemenProdi::class, 'index'])->name('admin.prodi');

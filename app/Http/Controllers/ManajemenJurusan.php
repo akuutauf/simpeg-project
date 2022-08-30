@@ -27,7 +27,11 @@ class ManajemenJurusan extends Controller
      */
     public function create()
     {
-        //
+        $data = [
+            'action' => route('admin.store.jurusan')
+        ];
+
+        return view('admin.jurusan.create', $data);
     }
 
     /**
@@ -38,7 +42,8 @@ class ManajemenJurusan extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Jurusan::create($request->all());
+        return redirect()->route('admin.jurusan');
     }
 
     /**
@@ -60,7 +65,12 @@ class ManajemenJurusan extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = [
+            'jurusan'  => Jurusan::find($id),
+            'action' => route('admin.update.jurusan', $id)
+        ];
+
+        return view('admin.jurusan.form', $data);
     }
 
     /**
@@ -70,9 +80,10 @@ class ManajemenJurusan extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        Jurusan::where('id', $request->id)->update($request->only(['Nama_Jurusan']));
+        return redirect()->route('admin.jurusan');
     }
 
     /**
@@ -83,6 +94,7 @@ class ManajemenJurusan extends Controller
      */
     public function destroy($id)
     {
-        //
+        Jurusan::where('id', $id)->delete();
+        return redirect()->route('admin.jurusan');
     }
 }
