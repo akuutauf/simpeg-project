@@ -15,24 +15,24 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('employee_type_id');
-            $table->string('nip')->nullable();
-            $table->string('nidn')->nullable();
-            $table->string('name');
-            $table->enum('gender', ['L', 'P']);
-            $table->string('phone')->nullable();
-            $table->string('email')->nullable();
-            $table->string('birthplace')->nullable();
-            $table->date('birthdate')->nullable();
-            $table->string('religion');
-            $table->string('address');
-            $table->string('city');
-            $table->string('district');
-            $table->string('province');
-            $table->string('nationality');
-            $table->string('postal_code');
-            $table->string('back_degree')->nullable();
-            $table->string('front_degree')->nullable();
+            $table->unsignedBigInteger('employee_type_id'); // employee
+            $table->string('nip')->nullable(); // employee
+            $table->string('nidn')->nullable(); // employee
+            $table->string('name'); // personal
+            $table->enum('gender', ['L', 'P']); // personal
+            $table->string('phone')->nullable(); // personal
+            $table->string('email')->nullable(); // personal
+            $table->string('birthplace')->nullable(); // personal
+            $table->date('birthdate')->nullable(); // personal
+            $table->string('religion'); // personal
+            $table->string('address'); // address
+            $table->string('city'); // address
+            $table->string('district'); // address
+            $table->string('province'); // address
+            $table->string('nationality'); // address
+            $table->string('postal_code'); // address
+            $table->string('back_degree')->nullable(); // personal
+            $table->string('front_degree')->nullable(); // personal
             $table->timestamps();
             $table->foreign('employee_type_id')->references('id')->on('employee_types')->onDelete('restrict')->onUpdate('cascade');
         });

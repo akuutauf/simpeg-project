@@ -1,3 +1,5 @@
+<title>SIMPEG | Login Page</title>
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">

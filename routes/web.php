@@ -36,12 +36,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardAdmin::class, 'index'])->name('dashboard');
 
     // contoh route event
-    Route::get('/index/event', [ManajemenEvent::class, 'index'])->name('admin.event');
-    Route::get('/create/event', [ManajemenEvent::class, 'create'])->name('admin.create.event');
-    Route::post('/store/event', [ManajemenEvent::class, 'store'])->name('admin.store.event');
-    Route::get('/edit/{id}/event', [ManajemenEvent::class, 'edit'])->name('admin.edit.event');
-    Route::post('/update/{id}/event', [ManajemenEvent::class, 'update'])->name('admin.update.event');
-    Route::get('/destroy/{id}/event', [ManajemenEvent::class, 'destroy'])->name('admin.delete.event');
+    // Route::get('/index/event', [ManajemenEvent::class, 'index'])->name('admin.event');
+    // Route::get('/create/event', [ManajemenEvent::class, 'create'])->name('admin.create.event');
+    // Route::post('/store/event', [ManajemenEvent::class, 'store'])->name('admin.store.event');
+    // Route::get('/edit/{id}/event', [ManajemenEvent::class, 'edit'])->name('admin.edit.event');
+    // Route::post('/update/{id}/event', [ManajemenEvent::class, 'update'])->name('admin.update.event');
+    // Route::get('/destroy/{id}/event', [ManajemenEvent::class, 'destroy'])->name('admin.delete.event');
 
     // akademik
     Route::get('/index/akademik', [ManajemenAkademik::class, 'index'])->name('admin.akademik');
@@ -50,6 +50,11 @@ Route::middleware(['auth'])->group(function () {
 
     // employee
     Route::get('/index/employee', [ManajemenEmployee::class, 'index'])->name('admin.employee');
+    Route::get('/create/employee', [ManajemenEmployee::class, 'create'])->name('admin.create.employee');
+    Route::post('/store/employee', [ManajemenEmployee::class, 'store'])->name('admin.store.employee');
+    Route::get('/edit/{id}/employee', [ManajemenEmployee::class, 'edit'])->name('admin.edit.employee');
+    Route::post('/update/{id}/employee', [ManajemenEmployee::class, 'update'])->name('admin.update.employee');
+    Route::get('/destroy/{id}/employee', [ManajemenEmployee::class, 'destroy'])->name('admin.delete.employee');
 
     // employee type
     Route::get('/index/employee-type', [ManajemenEmployeeType::class, 'index'])->name('admin.employee-type');

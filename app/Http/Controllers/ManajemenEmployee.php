@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employee;
+use App\Models\EmployeeType;
 use Illuminate\Http\Request;
 
 class ManajemenEmployee extends Controller
@@ -27,7 +28,12 @@ class ManajemenEmployee extends Controller
      */
     public function create()
     {
-        //
+        $data = [
+            'action' => route('admin.store.employee')
+        ];
+        $employee_type = EmployeeType::distinct()->get();
+
+        return view('admin.employee.create', $data, compact('employee_type'));
     }
 
     /**
@@ -38,7 +44,8 @@ class ManajemenEmployee extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Employee::create($request->all());
+        return redirect()->route('admin.employee');
     }
 
     /**
@@ -60,7 +67,13 @@ class ManajemenEmployee extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = [
+            'employee'  => Employee::find($id),
+            'action' => route('admin.update.employee', $id)
+        ];
+        $employee_type = EmployeeType::distinct()->get();
+
+        return view('admin.employee.form', $data, compact('employee_type'));
     }
 
     /**
@@ -70,9 +83,10 @@ class ManajemenEmployee extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        Employee::where('id', $request->id)->update($request->only(['employee_type_id', 'nip', 'nidn', 'name', 'gender', 'phone', 'email', 'birthplace', 'birthdate', 'religion', 'address', 'city', 'district', 'province', 'nationality', 'postal_code', 'back_degree', 'front_degree']));
+        return redirect()->route('admin.employee');
     }
 
     /**
@@ -83,6 +97,7 @@ class ManajemenEmployee extends Controller
      */
     public function destroy($id)
     {
-        //
+        Employee::where('id', $id)->delete();
+        return redirect()->route('admin.employee');
     }
 }

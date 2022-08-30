@@ -17,7 +17,7 @@
                 <a class="nav-link" href="/akademik">Akademik</a>
             </li>
         </ul>
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mr-4">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-black" href="#" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -25,7 +25,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     @if (auth()->user() != null)
-                        <a class="dropdown-item" href="{{ route('dashboard') }}">Masuk</a>
+                        <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
                     @else
                         <a class="dropdown-item" href="{{ route('login') }}">Login</a>
                     @endif

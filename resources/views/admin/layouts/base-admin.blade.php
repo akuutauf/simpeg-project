@@ -27,6 +27,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     {{-- Css manual --}}
     <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="{{ url('plugins/daterangepicker/daterangepicker.css') }}">
 </head>
 
 <body>
@@ -71,6 +73,10 @@
     <script src="{{ asset('admin/js/dashboard.js') }}"></script>
     <script src="{{ asset('admin/js/Chart.roundedBarCharts.js') }}"></script>
     <!-- End custom js for this page-->
+
+    {{-- Import library datepicker --}}
+    <script src="{{ asset('admin/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('admin/js/datedropper-javascript.js') }}"></script>
 
     {{-- Include another js file --}}
     @yield('script')

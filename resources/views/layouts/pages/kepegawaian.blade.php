@@ -1,7 +1,7 @@
 @extends('layouts.base-user')
 
 @section('title')
-    <title>Kepegawaian | SIMPEG</title>
+    <title>SIMPEG | Kepegawaian</title>
 @endsection
 
 @section('content')

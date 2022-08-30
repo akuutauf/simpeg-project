@@ -1,7 +1,7 @@
 @extends('layouts.base-user')
 
 @section('title')
-    <title>Beranda | SIMPEG</title>
+    <title>SIMPEG | Beranda</title>
 @endsection
 
 @section('content')

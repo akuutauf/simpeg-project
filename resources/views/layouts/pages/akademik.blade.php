@@ -1,7 +1,7 @@
 @extends('layouts.base-user')
 
 @section('title')
-    <title>Akademik | SIMPEG</title>
+    <title>SIMPEG | Akademik</title>
 @endsection
 
 @section('content')
