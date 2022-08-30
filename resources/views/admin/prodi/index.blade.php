@@ -53,7 +53,7 @@
                         <div class="card-body">
                             <p class="card-title">Table data Prodi</p>
                             {{-- Button Tambah --}}
-                            <a href="{{ route('admin.create.employee-type') }}" type="button"
+                            <a href="{{ route('admin.create.prodi') }}" type="button"
                                 class="btn btn-primary btn-icon-text mb-3">
                                 <i class="ti-plus btn-icon-prepend mdi mdi-plus"></i>
                                 Tambah
@@ -80,9 +80,9 @@
                                                     <td>{{ $item->updated_at == '' ? 'Not Yet' : $item->updated_at }}
                                                     </td>
                                                     <td>
-                                                        <a href="{{ route('admin.edit.employee-type', $item->id) }}"
+                                                        <a href="{{ route('admin.edit.prodi', $item->id) }}"
                                                             class="link-manage">Edit</a> | <a
-                                                            href="{{ route('admin.delete.employee-type', $item->id) }}"
+                                                            href="{{ route('admin.delete.prodi', $item->id) }}"
                                                             class="link-manage"
                                                             onclick="return confirm('Apakah Anda yakin ingin menghapus data?');">Delete</a>
                                                     </td>

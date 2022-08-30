@@ -27,7 +27,11 @@ class ManajemenProdi extends Controller
      */
     public function create()
     {
-        //
+        $data = [
+            'action' => route('admin.store.prodi')
+        ];
+
+        return view('admin.prodi.create', $data);
     }
 
     /**
@@ -38,7 +42,8 @@ class ManajemenProdi extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Prodi::create($request->all());
+        return redirect()->route('admin.prodi');
     }
 
     /**
@@ -60,7 +65,12 @@ class ManajemenProdi extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = [
+            'prodi'  => Prodi::find($id),
+            'action' => route('admin.update.prodi', $id)
+        ];
+
+        return view('admin.prodi.form', $data);
     }
 
     /**
@@ -70,9 +80,10 @@ class ManajemenProdi extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        Prodi::where('id', $request->id)->update($request->only(['Nama_Prodi']));
+        return redirect()->route('admin.prodi');
     }
 
     /**
@@ -83,6 +94,7 @@ class ManajemenProdi extends Controller
      */
     public function destroy($id)
     {
-        //
+        Prodi::where('id', $id)->delete();
+        return redirect()->route('admin.prodi');
     }
 }

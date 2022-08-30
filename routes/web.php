@@ -59,6 +59,11 @@ Route::middleware(['auth'])->group(function () {
 
     // prodi
     Route::get('/index/prodi', [ManajemenProdi::class, 'index'])->name('admin.prodi');
+    Route::get('/create/prodi', [ManajemenProdi::class, 'create'])->name('admin.create.prodi');
+    Route::post('/store/prodi', [ManajemenProdi::class, 'store'])->name('admin.store.prodi');
+    Route::get('/edit/{id}/prodi', [ManajemenProdi::class, 'edit'])->name('admin.edit.prodi');
+    Route::post('/update/{id}/prodi', [ManajemenProdi::class, 'update'])->name('admin.update.prodi');
+    Route::get('/destroy/{id}/prodi', [ManajemenProdi::class, 'destroy'])->name('admin.delete.prodi');
 
     // mahasiswa
     Route::get('/index/mahasiswa', [ManajemenMahasiswa::class, 'index'])->name('admin.mahasiswa');
