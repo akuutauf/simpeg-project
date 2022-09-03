@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// pages user
 Route::get('/', function () {
     return view('layouts.pages.beranda');
 });
@@ -31,7 +32,7 @@ Route::get('/akademik', function () {
     return view('layouts.pages.akademik');
 });
 
-// middleware for admin page
+// middleware for admin pages
 Route::middleware(['auth'])->group(function () {
 
     // admin
@@ -81,5 +82,3 @@ Route::middleware(['auth'])->group(function () {
 require __DIR__ . '/auth.php';
 
 // https://api-sister.herokuapp.com/api/v1/
-
-// Route::get('/kepegawaian', [KepegawaianPage::class, 'index'])->name('kepegawaian');
